@@ -5,7 +5,8 @@
 // var msg = 'Hello World'
 // console.log(msg)
 
+// script to reveal file path
 var path = require('path')
 var appDir = path.dirname(require.main.filename)
-console.log(path)
+console.log(appDir)
 // , " ", appDir
