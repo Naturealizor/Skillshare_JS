@@ -27,13 +27,51 @@
 
 // //                               PRINTS OUT "https:arkmont.com/the-quick-brown-fow-jumps-of-the-lazy-dog"
 
-// What does this function do?
-function something() {
-    // Step 1
-    // ...
-    // Step 2
-    // ...
+// == (equal to) 
+// === (strict equal to, ensures var types are adheared to)
 
-    // Return an object
-    return {}
+// age = 20;    
+// age != 20; /* false */
+// age != 19 /* true */;
+
+// var empty;
+// console.log(empty)
+
+// empty == undefined /* true */
+// empty === undefined /* true */
+// empty != undefined /* false */
+
+
+// ----------------IF ELSE STATEMENTS----------------
+
+// var name = 'Jake'
+
+// if(name == 'Jake') {
+//     alert("Hurray it\'s me")
+//     } else {
+//         alert('My name is NOT Jake')
+//     }
+
+// if(name == 'Joseph') {
+//     alert('Hello Joe')
+// } else if(name == 'Jake') {
+//     alert('THIS IS TRUE')
+// } else {
+//     alert('SOMETHING ELSE')
+// }
+
+
+// name = prompt('What is your name?')
+// if(name.toLowerCase() == "jake") {
+//     alert('Hello Jake')
+// }
+
+var name = prompt("what is your name")
+
+if(name == null) {
+    alert("Hello " + name)
+} else if(name === null){
+    alert("It's no name!")
+} else {
+    alert("Hello guest")
 }

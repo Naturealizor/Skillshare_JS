@@ -1,0 +1,4 @@
+"skipFiles": [
+    "${workspaceFolder}/node_modules/**/*.js",
+    "!${workspaceFolder}/node_modules/math/**/*.js"
+]
