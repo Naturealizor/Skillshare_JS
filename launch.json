@@ -10,8 +10,11 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/app.js",
             "skipFiles": [
-                "<node_internals>/**"
+                "<node_internals>/**",
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js"
             ]
+
         },
         {
             "type": "chrome",

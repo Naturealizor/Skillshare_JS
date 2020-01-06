@@ -1,0 +1,92 @@
+---------------------------------Define @mixin---------------------------------
+@mixin circle {
+     width: 50px;
+     height: 50px;
+     border-radius: 100%;
+}
+
+---------------------------------USAGE WITH @INCLUDED
+.box {
+     @include circle;
+     background: #fc0;
+}
+
+---------------------------------CSS OUTPUT
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #fc0;
+}
+---------------------------------------------------------------------------------------------------------------
+
+---------------------------------Same mixin, but this one includes an argument---------------------------------
+
+---------------------------------DEFINE @MIXIN
+@mixin circle($size) {
+     width: $size;
+     height: $size;
+     border-radius: 100%;
+}
+
+---------------------------------USAGE WITH @INCLUDED
+.box {
+     @include circle(100px);
+     background: #fc0;
+}
+
+---------------------------------CSS OUTPUT
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: #fc0;
+}
+---------------------------------------------------------------------------------------------------------------
+
+---------------------------------Link Colour Setting---------------------------------
+
+You can set normal link colour as well as :hover, :active, :focus colour at the same time. Once you define normal link colour, Sass generates lighter colour hex code automatically using function of lighten.
+
+There are more functions for the colour. For example, darken to darken the colour, saturate to adjust the saturation etc etc.
+
+---------------------------------DEFINE @MIXIN
+@mixin linkColor($color) {
+	color: $color;
+	
+	&amp;:hover, &amp;:active, &amp;:focus {
+         color: lighten($color, 20%);
+     }
+}
+
+---------------------------------USAGE WITH @INCLUDED
+a{
+     @include linkColor(#3cf);
+}
+
+---------------------------------CSS OUTPUT
+a {
+	color: #33ccff;
+}
+---------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
